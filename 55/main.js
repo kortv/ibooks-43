@@ -1,4 +1,4 @@
-var tl = new TimelineLite();
+var tl = new TimelineMax();
 var j = 0;
 var wraper = document.querySelector("#wraper");
 
@@ -66,4 +66,4 @@ function animation (){
   }
 }
 
-window.addEventListener('touchstart', animation);
+window.addEventListener('click', animation);
