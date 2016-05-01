@@ -87,9 +87,7 @@ body {
 #btn {
   width: 1300px;
   margin: auto;
-  top: 712px;
   border: 0px solid transparent;
-  z-index: 2;
   background-color: #3f2d6d;
   text-align: center;
   font: 60px/72px Helvetica Neue, sans-serif;

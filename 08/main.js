@@ -21,15 +21,27 @@ function animation (e){
     clicked = false;
 
     tl.staggerFrom(".c", 1, {
-      scale: 0,
+      rotation: '+=200',
+      left: 800,
       autoAlpha: 0,
       ease: Back.easeOut
     }, 0.5)
-    .staggerFrom(".str", 0.5 , {
+    .staggerFrom(".circl", 1, {
+      rotation: '-=20',
+      scale: 0.6,
+      autoAlpha: 0,
+      ease: Cubic.easeOut
+    }, 0.5, 0.5)
+    .staggerFrom(".str", 0.8 , {
       scale: 0,
       autoAlpha: 0,
       ease: Cubic.easeOut
-    }, 0.25, 1.5)
+    }, 0.4, 1.5)
+    .staggerFrom(".txt", 1 , {
+      top: '-=50',
+      autoAlpha: 0,
+      ease: Cubic.easeOut
+    }, 0.5, 1)
   }
 }
 

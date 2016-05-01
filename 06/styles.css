@@ -150,3 +150,24 @@ body {
   top: 1420px;
   z-index: 1;
 }
+#wraper{
+  width: 2048px;
+  z-index: 99;
+  margin-top: 650px;
+}
+
+#btn {
+  width: 1300px;
+  margin: auto;
+  border: 0px solid transparent;
+  background-color: #3f2d6d;
+  text-align: center;
+  font: 60px/72px Helvetica Neue, sans-serif;
+  color: #fff;
+  letter-spacing: normal;
+  padding: 60px 100px;
+}
+
+.c, .line {
+  visibility: hidden;
+}
