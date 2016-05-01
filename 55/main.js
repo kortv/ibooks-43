@@ -15,8 +15,10 @@ var clicked = true;
 function animation (e){
   if (clicked){
     clearInterval(shakerInt);
-    wraper.className = "animated fadeOut";
-      console.log(e);
+    TweenMax.to( wraper, 1,{
+      autoAlpha: 0,
+    });
+
     clicked = false;
 
     j = j + 1;
@@ -35,6 +37,5 @@ function animation (e){
 
 }
 
-//document.addEventListener('click', function(e){animation(e)});
-document.querySelector("#ring").onclick = function(){ location.reload(); };
-document.querySelector("body").onclick = function(e){animation(e)}
+document.addEventListener('touchstart', function(e){animation(e)});
+document.querySelector("#ring").addEventListener('touchstart', function(){ location.reload()});

@@ -1,0 +1,32 @@
+{
+  "env": {
+    "browser": false,
+    "node": true
+  },
+  "rules": {
+  	"indent": [2, 2],
+    "no-debugger": 0,
+    "no-console": 0,
+    "new-cap": 0,
+    "strict": 0,
+    "no-underscore-dangle": 0,
+    "no-use-before-define": 0,
+    "eol-last": 0,
+    "no-alert": 0,
+    "quotes": [0, "single"],
+    "jsx-quotes": [1, "prefer-single"],
+    "jsx-a11y/img-uses-alt": 0,
+    "jsx-a11y/valid-aria-role": 0,
+    "jsx-a11y/redundant-alt": 0,
+    "no-nested-ternary": 0,
+    eqeqeq: [0, 'allow-null'],
+    no-param-reassign: ["error", { "props": false }]
+  },
+    "globals": {
+        "document": true,
+        "window": true,
+        "alert": true,
+        "FormData": true,
+        "sessionStorage": true
+    }
+}
