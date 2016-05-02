@@ -10,7 +10,9 @@ var sortableList = Sortable.create(sortList, { animation: 300,
  });
 
 function isSorted(el) {
-  var nums = [].map.call(el, (e) => e.getAttribute('data-num'))
+  var nums = [].map.call(el, function (e) {
+    return e.getAttribute('data-num')
+  });
   if(nums.join('')==='1234'){
     sortableList.options.disabled = true;
   };

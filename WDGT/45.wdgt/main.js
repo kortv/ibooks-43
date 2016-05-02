@@ -1,20 +1,4 @@
 var tl = new TimelineMax();
-var sortList = document.querySelector('#r');
-
-
-// Simple list
-var sortableList = Sortable.create(sortList, { animation: 300,
-  onUpdate: function (evt/**Event*/){
-    isSorted(evt.from.children);
-  }
- });
-
-function isSorted(el) {
-  var nums = [].map.call(el, (e) => e.getAttribute('data-num'))
-  if(nums.join('')==='1234'){
-    sortableList.options.disabled = true;
-  };
-}
 
 var wraper = document.querySelector("#wraper");
 
@@ -34,18 +18,10 @@ function animation (e){
       autoAlpha: 0,
       scale: 0
     });
-    TweenMax.to( '#l', 1,{
-      autoAlpha: 1,
-      top: '-=50'
-    });
-    TweenMax.to( '#r', 1,{
-      autoAlpha: 1,
-      top: '-=50',
-    delay: 0.4
-    });
+
     clicked = false;
 
-    tl.staggerFrom(".e", 2, {
+    tl.staggerFrom(".g", 2, {
       rotation: '-=720',
       autoAlpha: 0,
       ease: Cubic.easeOut
@@ -59,7 +35,7 @@ function animation (e){
       top: '+=50',
       autoAlpha: 0,
       ease: Cubic.easeOut
-    }, 0.5, 2.7)
+    }, 0.2, 1.5)
   }
 }
 

@@ -10,8 +10,10 @@ var sortableList = Sortable.create(sortList, { animation: 300,
  });
 
 function isSorted(el) {
-  var nums = [].map.call(el, (e) => e.getAttribute('data-num'))
-  if(nums.join('')==='1234'){
+  var nums = [].map.call(el, function (e) {
+    return e.getAttribute('data-num')
+  });
+  if(nums.join('')==='12345'){
     sortableList.options.disabled = true;
   };
 }
@@ -44,22 +46,6 @@ function animation (e){
     delay: 0.4
     });
     clicked = false;
-
-    tl.staggerFrom(".e", 2, {
-      rotation: '-=720',
-      autoAlpha: 0,
-      ease: Cubic.easeOut
-    }, 0.1)
-    .staggerFrom(".st", 1.2 , {
-      scale: 0,
-      autoAlpha: 0,
-      ease: Cubic.easeOut
-    }, 0.3, 1.5)
-    .staggerFrom(".txt", 0.8 , {
-      top: '+=50',
-      autoAlpha: 0,
-      ease: Cubic.easeOut
-    }, 0.5, 2.7)
   }
 }
 
